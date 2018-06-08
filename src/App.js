@@ -22,7 +22,7 @@ const particleOptions = {
   }
 };
 
-const initialState = {
+const initialState = { 
   input: '',
   imageUrl: '',
   box: {},
