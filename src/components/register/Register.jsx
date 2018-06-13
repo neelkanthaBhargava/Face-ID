@@ -23,6 +23,7 @@ class Register extends React.Component{
 
   onSubmitSignIn = () => {
     // console.log(this.state);
+    
     fetch('https://aqueous-coast-63188.herokuapp.com/register', {
       method: 'post',
       headers: {
@@ -36,7 +37,7 @@ class Register extends React.Component{
     })
       .then(response => response.json())
       .then(user => {
-        if (user) {
+        if (user.uid) {
           this.props.loadUser(user);
           this.props.onRouteChange('home');
         }else {
